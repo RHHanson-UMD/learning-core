@@ -1,0 +1,10 @@
+{
+  "name": "@rhhanson-umd/learning-core",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Reusable tested mathematical engines for interactive course visualizations.",
+  "scripts": {"test": "node --test"},
+  "engines": {"node": ">=20"},
+  "exports": {"./subset-sum": "./src/subset-sum.js", "./graph": "./src/graph.js"}
+}
