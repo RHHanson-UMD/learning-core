@@ -19,3 +19,9 @@ Course changes belong to their dedicated maintenance chats and repos (ENEE-620, 
 ## Workflow and reporting
 
 Before editing, inspect live `main`, open issues/PRs, `README.md`, tests and actual Actions runs; the Project handoff is a dated snapshot. Prefer reviewable branches and scoped PRs. Afterward, report precise files and sources opened, commands/tests actually run, PR/commit link, CI status, unresolved compatibility risks and next action. Do not claim a release tag exists until it has been created and verified.
+
+## Release and compatibility gate (tracked in #3)
+
+Before changing a public engine API, inspect exported function signatures, edge-case behavior, tests and the vendored copies used by courses. Record a before/after compatibility table and confirm the consumer's own tests from a separately owned PR; do not interpret passing library tests as proof that consumers still work.
+
+When the first reviewed version is ready, tag an immutable, tested commit and document the exact tag plus commit SHA, expected imports, input constraints, deterministic outputs and recovery instructions per `docs/VERSIONING.md`. Until a tag is actually created, describe versioning as **policy**, not a published release. Check `package.json`, `test/`, and workflow status before reporting successful tests. Do not modify student course repos as part of a shared-engine change without an explicit course-owned issue and review.
