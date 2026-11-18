@@ -94,7 +94,7 @@ def self_test() -> None:
     assert check_path("keys/.env.production")
     assert check_path("secrets/id_rsa")
     assert not check_path("site/visualizations/lesson.js")
-    assert check_text("site/index.html", '<a href="https://" + "drive.google.com/file/d/opaque">')
+    assert check_text("site/index.html", '<a href="' + 'https://' + 'drive.google.com/file/d/opaque">')
     assert check_text(".github/workflows/test.yml", "on:\n  pull_request_target:\n")
     assert check_text(".github/workflows/test.yml", "permissions: write-all\n")
     assert check_text(".github/workflows/test.yml", "- uses: actions/checkout@v4\n")
