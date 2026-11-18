@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {NUMBERS, TARGET, evaluateSubsetSum} from '../src/subset-sum.js';
+import {isClique} from '../src/graph.js';
 
 // Independently derived CNF truth table in x1,x2,x3 order.
 // These expectations intentionally do not call CLAUSES or formulaSatisfied.
